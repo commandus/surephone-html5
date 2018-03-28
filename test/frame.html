@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="manifest" href="/manifest.json">
+        <link rel="shortcut icon" type="image/png" href="/i/launcher-icon-1x.png" sizes="48x48">
+        <link rel="shortcut icon" type="image/png" href="/i/launcher-icon-4x.png" sizes="192x192">
+        <title>Test - Surephone</title>
+        <script type="text/javascript" src="/tag/x-phone.js"></script>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/css/materialize.min.css">    
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/js/materialize.min.js"></script>
+    </head>
+	<body>
+        <div class="row">
+            <div class="input-field col s3 offset-s1">
+                <div class="row">
+                    PID 1
+                </div>
+            </div>
+        </div>
+        <div class="row">
+                <div class="input-field col s10 offset-s1">
+                    <iframe src="https://surephone.commandus.com/sign-phone.html?pid=117&label=label&prefix=%2B7&delimiter=-&blocks=2%2C3%2C3%2C4" frameBorder="0" align="left" scrolling="no">
+                        Ваш браузер не поддерживает фреймы!
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        var chpid = document.getElementById('pid');
+        var xphone = document.getElementById('phone');
+        chpid.onchange = function(e) {
+            xphone.pid = chpid.value;
+        }
+    </script>
+</html>

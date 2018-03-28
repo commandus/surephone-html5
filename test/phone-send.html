@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="manifest" href="/manifest.json">
+        <link rel="shortcut icon" type="image/png" href="/i/launcher-icon-1x.png" sizes="48x48">
+        <link rel="shortcut icon" type="image/png" href="/i/launcher-icon-4x.png" sizes="192x192">
+        <title>Test - Surephone</title>
+        <script type="text/javascript" src="/tag/x-phone-send.js"></script>
+        <script>
+            function onToken(token, number, phone) {
+                console.log(token);
+                console.log(number);
+                console.log(phone);
+            }
+        </script>
+    </head>
+	<body>
+        <x-phone-send id="phone-send" label="Отправить" pid="1"
+            prefix="+7" delimiter="-" blocks="2,3,3,4" numeric="true" 
+            ontoken="onToken"></x-phone-send>
+    </body>
+</html>
